@@ -1,0 +1,25 @@
+public static int countRowOccurances(int[][] matrix, int rowIndex, int target){
+		int targetCount = 0;
+		if (rowIndex < 0 || rowIndex >= matrix.length){
+			throw new IllegalArgumentException();
+		}else{
+			for (int col=0; col<matrix[0].length; col++){
+				if (matrix[rowIndex][col] == target){
+					targetCount++;
+				}
+			}
+		}
+		return targetCount;
+}
+
+public static int[] colSums(int[][] matrix){
+		int[] newMatrix = new int[matrix.length-1];
+		for (int col = 0; col< matrix[0].length; col++){
+			int colSum = 0;
+			for (int row=0; row<matrix.length; row++){
+				colSum = colSum + matrix[row][col];
+			}
+			newMatrix[col]=colSum;
+		}
+		return newMatrix;
+}

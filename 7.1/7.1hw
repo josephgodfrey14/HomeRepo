@@ -1,0 +1,55 @@
+public static boolean isSorted (double[] nums){
+	if (nums.length > 1){
+		for (int i=0; i<nums.length-2; i++){
+			if nums[i]< nums[i+1]{
+				return false;
+			}else{ 
+				return true;
+			}
+		}
+	}else if(nums.length == 1){
+		return true;
+	}else {
+		return false;
+	}	
+}
+
+
+public static int minGap(int[] nums){
+	int smallestGap = Integer.MAX_VALUE;
+	if (nums.length > 1){
+		for (int i=0; i<nums.length-2; i++){
+			if (nums[i+1]-nums[i] < smallestGap){
+				smallestGap = nums[i+1]-nums[i];
+			}
+		}
+		return smallestGap;
+	}else{
+		return 0;
+	}
+}
+
+
+public static double stdev(int[] nums){
+	double total = 0.0;
+	for (int i=0; i< nums.length; i++){ //computes average
+		total = total + nums[i]; 
+	}
+	double average = total / nums.length;
+	total = 0.0;
+	for (int i=0; i< nums.length; i++){ //computes squares
+		 total = total + Math.pow((nums[i]-average), 2);
+	}
+	return (Math.sqrt(total / (nums.length-1)));
+}
+
+
+public static int countTarget(String[] words, String target){
+	int count = 0;
+	for (int i=0; i<words.length; i++){
+		if (target.equals(words[i])){
+			count++;
+		}
+	}
+	return count;
+}

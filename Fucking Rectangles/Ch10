@@ -1,0 +1,104 @@
+//Joseph Godfrey
+//6/May/2015
+
+public static void minToFront(ArrayList<Integer> list){
+	int length=list.size()-1;
+	int smallest = Integer.MAX_VALUE;
+	int indexOfSmallest=-1;
+	for(int i=length; i>=0; i--){
+		if(list.get(i)<=smallest){
+			smallest=list.get(i);
+			indexOfSmallest = list.indexOf(smallest);
+		}
+	}
+	for(int i=0; i<=length; i++){
+		if(list.get(i)<=smallest){
+			smallest=list.get(i);
+		}
+	}
+	list.add(0, list.get(indexOfSmallest));
+	list.remove(indexOfSmallest+1);
+
+}
+
+public static void swapMinToFront(ArrayList<Integer> list){	
+	int length=list.size()-1;
+	int smallest = Integer.MAX_VALUE;
+	int indexOfSmallest=-1;
+	for(int i=length; i>=0; i--){
+		if(list.get(i)<=smallest){
+			smallest=list.get(i);
+			indexOfSmallest = list.indexOf(smallest);
+		}
+	}
+	for(int i=0; i<=length; i++){
+		if(list.get(i)<=smallest){
+			smallest=list.get(i);
+		}
+	}
+	
+	int valAtSmall = list.get(indexOfSmallest);
+	int headVal = list.get(0);
+	list.remove(list.remove(indexOfSmallest));
+	list.remove(0);
+	list.add(0, valAtSmall);
+	list.add(indexOfSmallest, headVal);
+}
+
+public static void stutter(ArrayList<Integer> list, int numStutters){
+	int length=list.size()-1;
+	for(int i=length; i>=0; i--){
+		for (int stut=numStutters-1; stut>0; stut--){
+			list.add(i, list.get(i));
+		}
+	}
+	if (numStutters<=0){
+		list.clear();
+	}
+}
+
+public static ArrayList<String> merge(ArrayList<String> list, ArrayList<String> list2){
+	
+	ArrayList<String> newList = new ArrayList<String>();
+	
+	int loc1=0;
+	int loc2=0;
+	
+	for (int i=0; i<list.size()+list2.size(); i++){
+		if((list.get(loc1).compareTo(list2.get(loc2)))<0){
+			newList.add(list.get(loc1));
+			if (loc1<list.size()-1){
+				loc1++;
+			}
+		}else{
+			newList.add(list2.get(loc2));
+			if (loc2<list2.size()-1){
+				loc2++;
+			}
+		}
+		if (i==list.size()+list2.size()-2){
+			
+			if(loc1==list.size()-1){
+				newList.add(list2.get(loc2));
+			}else if(loc2==list2.size()-1){
+				newList.add(list.get(loc1));	
+			}
+			i++;
+		}
+	}
+	return newList;	
+}
+
+public static boolean compareTo(TVSeries ser1, TVSeries ser2){//Returns true if first argument is larger
+	int ser1Seasons = ser1.getNumSeasons();
+	int ser2Seasons = ser2.getNumSeasons();
+	int ser1Total = 0;
+	int ser2Total = 0;
+	for(int i=1;i<=ser1Seasons;i++){
+		ser1Total=ser1Total+getNumEpisodesInSeason(i);
+	}
+	for(int j=1;j<=ser2Seasons;j++){
+		ser2Total=ser2Total+getNumEpisodesInSeason(j);
+	}
+	return(ser1Total>ser2Total);
+}

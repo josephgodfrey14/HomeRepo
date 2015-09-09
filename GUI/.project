@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>GUI</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>FirstLayout.java</name>
+			<type>1</type>
+			<location>F:/Augustana/CSC212/GUI/FirstLayout.java</location>
+		</link>
+		<link>
+			<name>GUI.java</name>
+			<type>1</type>
+			<location>F:/Augustana/CSC212/GUI/GUI.java</location>
+		</link>
+		<link>
+			<name>LayoutPractice.java</name>
+			<type>1</type>
+			<location>F:/Augustana/CSC212/GUI/LayoutPractice.java</location>
+		</link>
+		<link>
+			<name>SSG.java</name>
+			<type>1</type>
+			<location>F:/Augustana/CSC212/GUI/SSG.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

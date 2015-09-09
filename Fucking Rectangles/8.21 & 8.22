@@ -1,0 +1,41 @@
+//Joseph Godfrey
+//30/March/2015
+//8.21 & 8.22 printout
+
+
+public Rectangle union(Rectangle rect){
+    int rectX=0;
+    if (this.getX() < rect.getX()){
+        rectX= this.getX();}else{rectX= rect.getX();}
+    int rectY=0;
+    if (this.getY() < rect.getY()){
+        rectY= this.getY();}else{rectY= rect.getY();}
+    int rectWidth=0;
+    if (this.getWidth()+this.getX() > rect.getWidth()+rect.getX()){
+        rectWidth= this.getWidth()+this.getX()-rectX;}else{rectWidth =rect.getWidth()+rect.getX()-rectX;}
+    int rectHeight=0;
+    if (this.getHeight()+this.getY() > rect.getHeight()+rect.getY()){
+        rectHeight= this.getHeight()+this.getY()-rectY;}else{rectHeight= rect.getHeight()+rect.getY()-rectY;}
+    
+    return new Rectangle(rectX, rectY, rectWidth, rectHeight);
+    
+}
+
+
+public Rectangle intersection(Rectangle rect){
+    int rectX=0;
+    if (this.getX() > rect.getX()){
+        rectX= this.getX();}else{rectX= rect.getX();}
+    int rectY=0;
+    if (this.getY() > rect.getY()){
+        rectY= this.getY();}else{rectY= rect.getY();}
+    int rectWidth=0;
+    if (this.getWidth()+this.getX() < rect.getWidth()+rect.getX()){
+        rectWidth= this.getWidth()+this.getX()-rectX;}else{rectWidth =rect.getWidth()+rect.getX()-rectX;}
+    int rectHeight=0;
+    if (this.getHeight()+this.getY() < rect.getHeight()+rect.getY()){
+        rectHeight= this.getHeight()+this.getY()-rectY;}else{rectHeight= rect.getHeight()+rect.getY()-rectY;}
+    
+    return new Rectangle(rectX, rectY, rectWidth, rectHeight);
+    
+}

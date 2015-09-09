@@ -1,0 +1,82 @@
+
+
+layout type
+	main column
+		left-aligned
+		center-aligned
+		right-aligned
+	organization
+		bullets
+		numbers
+		none
+	pictures
+		post width
+		in-laid
+		dual in-laid
+	post flow
+		connected
+		blocks
+		split blocks
+	
+
+	blog type?
+		img/text/img-text
+	pic post type
+		like pinterest?
+	text post type
+		like twitter
+		like fb
+
+random 'fun' button that does stuff
+	intstantsfun button (plays sound byte) [shit idk how to do that one]
+	switches background
+	changes header color?
+
+
+header 
+	font/size
+	color
+	soc media buttons?
+	title
+	back/fin
+	
+
+background pic
+	animals
+	x	1 pissed owl
+	x	2 bark intensifies
+	x	3 peacock
+	x	4 cat
+	colors
+	1	blue
+	2	green
+	3	red
+	4	purple
+	landscapes
+	x	5 teletubby land (xp)
+	x	6 apoc bridge
+	x	7 woods
+	x	8 road to the stars
+	other
+	x	9 Planet Express
+	x	10 omnomnomagon 
+	x	11 dogecoin airdrop
+	x	12 being monitored
+sidebar
+	--part of layout?
+	
+	
+dialogue box - (0, 606, 1000, 94)
+
+buttons
+2  -  sound clip?
+3  -  flash?
+4  -  change color of something?
+5  -  
+6  -  back
+
+
+
+HELP:
+load background image -- got on own long before lab opened haha
+keyboard input for title?  -- resolved on own (in lab coincidentally)
